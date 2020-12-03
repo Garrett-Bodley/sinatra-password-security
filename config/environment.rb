@@ -9,5 +9,7 @@ ActiveRecord::Base.establish_connection(
   :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
 )
 
+ActiveRecord::Base.logger.level = 1
+
 require_all 'app'
 
